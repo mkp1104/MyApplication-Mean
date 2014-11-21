@@ -1,0 +1,361 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<div ng-app="validationApp" ng-controller="mainController">
+  <div class="container">
+    <div class="row">  
+   
+       <div class="col-sm-9">
+    <!-- =================================================================== -->
+    <!-- FORM ============================================================== -->
+    <!-- =================================================================== -->
+  
+    <form name="userForm" ng-submit="submitForm()" novalidate>
+
+        <!-- Candidate Name -->
+          <div class="form-group" ng-class="{ 'has-error' : userForm.candidatename.$invalid && !userForm.candidatename.$pristine }">
+            <label>Candidate Name</label>
+            <input type="text" name="candidatename" class="form-control" placeholder='Please Enter Candidate Name' ng-model="user.candidatename" required>
+            <p ng-show="userForm.candidatename.$invalid && !userForm.candidatename.$pristine" class="help-block">You Candidate name is required.</p>
+          </div>
+      
+      <!-- Project Name -->
+     
+      <div class="row">
+		<div class="col-lg-4">
+
+			<div class="form-group" ng-class="{ 'has-error' : userForm.projectname.$invalid && !userForm.projectname.$pristine }">
+            <label>Project Name</label>
+            <input type="text" name="projectname" class="form-control" placeholder='Please Enter Project Name' ng-model="user.projectname" required>
+            <p ng-show="userForm.projectname.$invalid && !userForm.projectname.$pristine" class="help-block">You Project name is required.</p>
+			</div>
+	   </div>
+	   <div class="col-lg-4">
+	   <!-- Practice Area -->
+			<div class="form-group" ng-class="{ 'has-error' : userForm.practiceArea.$invalid && !userForm.practiceArea.$pristine }">
+            <label>Practice Area </label>
+            <input type="text" name="practiceArea" placeholder='Please Enter Practice Area'  class="form-control" ng-model="user.practiceArea" required>
+            <p ng-show="userForm.practiceArea.$invalid && !userForm.practiceArea.$pristine" class="help-block">You Practice Area name is required.</p>
+			</div>
+		</div>
+		<div class="col-lg-4">
+	   <!-- Requester -->
+			<div class="form-group" ng-class="{ 'has-error' : userForm.requester.$invalid && !userForm.requester.$pristine }">
+            <label>Requester</label>
+            <input type="text" name="requester" class="form-control" placeholder='Please Enter Requester' ng-model="user.requester" required>
+            <p ng-show="userForm.requester.$invalid && !userForm.requester.$pristine" class="help-block">You Practice Area name is required.</p>
+			</div>
+		</div>
+	  </div>
+		<!--Interviewer's Name:-->
+		 <div class="row">
+			<div class="col-lg-4">
+
+				<div class="form-group" ng-class="{ 'has-error' : userForm.interviewername.$invalid && !userForm.interviewername.$pristine }">
+				<label>Interviewer's Name:</label>
+				<input type="text" name="interviewername" class="form-control" placeholder='Please Enter Interviewers Name' ng-model="user.interviewername" required>
+				<p ng-show="userForm.interviewername.$invalid && !userForm.interviewername.$pristine" class="help-block">You Interviewer's Name is required.</p>
+				</div>
+			</div>
+			<div class="col-lg-4">
+	   <!--Signature-->
+			<div class="form-group" ng-class="{ 'has-error' : userForm.signature.$invalid && !userForm.signature.$pristine }">
+            <label>Signature:</label>
+            <input type="text" name="signature" class="form-control" placeholder='Please Enter Signature ' ng-model="user.signature" required>
+            <p ng-show="userForm.signature.$invalid && !userForm.signature.$pristine" class="help-block">You Signature is required.</p>
+			</div>
+			</div>
+			<div class="col-lg-4">
+
+<!--      sfhfshfkf-->
+<!--
+      <form name="myForm" ng-controller="DateController as dateCtrl">
+     Pick a date in 2013:
+     <input type="date" id="exampleInput" name="input" ng-model="value"
+         placeholder="yyyy-MM-dd" min="2013-01-01" max="2013-12-31" required />
+     <span class="error" ng-show="myForm.input.$error.required">
+         Required!</span>
+     <span class="error" ng-show="myForm.input.$error.date">
+         Not a valid date!</span>
+      <tt>value = {{value | date: "yyyy-MM-dd"}}</tt><br/>
+      <tt>myForm.input.$valid = {{myForm.input.$valid}}</tt><br/>
+      <tt>myForm.input.$error = {{myForm.input.$error}}</tt><br/>
+      <tt>myForm.$valid = {{myForm.$valid}}</tt><br/>
+      <tt>myForm.$error.required = {{!!myForm.$error.required}}</tt><br/>
+  </form>-->
+
+<!--  sdfsfsfsdfsfd-->
+
+	   <!-- Date -->
+				<div class="form-group"  ng-class="{ 'has-error' : userForm.date.$invalid && !userForm.date.$pristine }">
+				<label>Date</label>
+				<input type="date" name="date" class="form-control" placeholder='Please Enter Date'  ng-model="user.date" required>
+				<p ng-show="userForm.date.$invalid && !userForm.date.$pristine" class="help-block"></p>
+				</div>
+			</div>
+		
+		 </div>
+	
+			<div class="form-group" class="col-sm-9">
+			<table class="table table-bordered table-hover" style="width:845px">
+			<tr class="info">
+				<td><b>Ratings</b> 
+				</td>
+				<td><b>Their Descriptions!!!!</b>
+				</td>
+			</tr>
+			<tr>
+				<td><b>Aware</b></td>
+				<td>Means that the candidate has heard/read about the tool/technology/skill needed at work. Should be capable to build a conversation with the client about it.					
+				</td> 
+  
+			</tr>
+			<tr>
+				<td><b>Understanding</b></td>
+				<td>Means that the candidate is familiar with the tool/technology/skill needed. Should be able to start producing prototye abd begin work on it.					
+				</td> 
+  
+			</tr>
+			<tr>
+				<td><b>Competent</b></td>
+				<td>Means that the candidate has either done or has the capability to work on a fully fledged project on the tool/technology/skill. Should know enough  to support a team of smart people who haven't worked on this technology					
+				</td> 
+  
+			</tr>
+			<tr>
+				<td><b>Expert</b></td>
+				<td>Means that the candidate can solve complex problems that are unique to the project. Has the ability to architect/create framework on the tool/technology/skill.					
+				</td> 
+  
+			</tr>
+			</table>
+			</div> 
+     
+		<div class="form-group" >
+			<ng-form name="myForm" ng-controller="MSController" novalidate>
+   
+			<table class="table table-bordered" >
+			<caption><strong>Add Mandatory Skills</strong></caption>
+				<thead>
+				<tr class="info">
+						<th>Skills</th>
+						<th>JRSS Rating</th>
+						<th>Interviewer's Rating</th>
+				</tr>
+				</thead>
+				<tbody>
+         
+					<tr  ng-repeat="skill in user.skillsReff1">
+					<td>{{skill.name}}</td>
+					<td>
+					    {{skill.jrssrating}}
+					</td>
+					<td>
+					    {{skill.interviewrating}}
+					</td>
+					</tr>
+	
+
+            <tr>
+              <td>
+                <div class="form-group"  >
+              <input name="name" type="text" ng-model="reff1.name" placeholder="skills" class="form-control" >
+              
+              </div>
+              </td>
+              <td>
+                   <select ng-model="reff1.jrssrating" class="form-control" >
+                   
+                    <option selected>Aware</option>
+                    <option selected>Understanding</option>
+                    <option selected>Competent</option>
+                    <option selected>Expert</option>
+                  </select>
+              </td>
+              <td>
+                  <select ng-model="reff1.interviewrating"  class="form-control"  >
+                   
+                    <option selected>Aware</option>
+                    <option selected>Understanding</option>
+                    <option selected>Competent</option>
+                    <option selected>Expert</option>
+                  </select></td>
+            </tr>
+            <tr>
+              <td><button type="button" ng-click="addSkills(reff1)" class="btn btn-info">Add One More Skill</button></td>
+            </tr>
+        </tbody>
+        </table>
+        </ng-form>
+      </div>
+
+      <div class="form-group" ng-controller="OPController">
+      <ng-form name="myForm1">
+    <table class="table table-bordered">
+      <caption ><strong>Add Optional Skills</strong></caption>
+        <thead>
+          <tr class="info">
+            <th>Skills</th>
+            <th>JRSS Rating</th>
+            <th>Interviewer's Rating</th>
+          </tr>
+        </thead>
+        <tbody>
+
+            <tr ng-repeat="skill in user.skillsReff2">
+              <td>{{skill.name}}</td>
+              <td>
+                  {{skill.jrssrating}}
+              </td>
+              <td>
+                  {{skill.interviewrating}}
+              </td>
+            </tr>
+
+
+            <tr>
+              <td><input type="text" ng-model="reff2.name" placeholder="skills" class="form-control" ></td>
+              <td>
+                   <select ng-model="reff2.jrssrating" class="form-control" >
+                    
+                    <option selected >Aware</option>
+                    <option selected>Understanding</option>
+                    <option selected>Competent</option>
+                    <option selected>Expert</option>
+                  </select>
+              </td>
+              <td>
+                  <select ng-model="reff2.interviewrating" class="form-control" >
+                   
+                    <option selected>Aware</option>
+                    <option selected>Understanding</option>
+                    <option selected>Competent</option>
+                    <option selected>Expert</option>
+                  </select></td>
+            </tr>
+            <tr>
+              <td><button type="button" ng-click="addSkills(reff2)" class="btn btn-info">Add One More Skill</button></td>
+            </tr>
+        </tbody>
+    </table>
+    </ng-form>
+    </div>
+ 
+        <!--Username-->
+
+
+	<!-- <div class="form-group" ng-class="{ 'has-error' : userForm.username.$invalid && !userForm.username.$pristine }">
+    <label>Username</label>
+    <input type="text" name="username" class="form-control" ng-model="user.username" ng-minlength="3" ng-maxlength="8">
+    <p ng-show="userForm.username.$error.minlength" class="help-block">Username is too short.</p>
+    <p ng-show="userForm.username.$error.maxlength" class="help-block">Username is too long.</p>
+	</div>
+        
+        <!-- EMAIL -->
+        <!-- <div class="form-group" ng-class="{ 'has-error' : userForm.email.$invalid && !userForm.email.$pristine }">
+            <label>Email</label>
+            <input type="email" name="email" class="form-control" ng-model="user.email">
+            <p ng-show="userForm.email.$invalid && !userForm.email.$pristine" class="help-block">Enter a valid email.</p>
+        </div>-->
+        
+            <div class="form-group">
+				<b> Comments:</b>
+				<textarea name="comments" ng-model="user.comments" required class="form-control" rows="5"></textarea>
+			</div>
+			<br />
+			
+			<center><button  type="submit" class="btn btn-primary" ng-disabled="userForm.$invalid">Submit</button> </center>
+			<br />
+			
+		
+			
+			
+			
+			
+    </form>
+
+  
+  <!--<div class="col-sm-6">-->
+    <!-- =================================================================== -->
+    <!-- VALIDATION TABLES ================================================= -->
+    <!-- =================================================================== -->    
+   <!-- <div class="row">
+        <div class="col-xs-3">
+            <h3>Form</h3>
+            <table class="table table-bordered">
+                <tbody>
+                    <tr>
+                        <td ng-class="{ success: userForm.$valid, danger: userForm.$invalid }">Valid</td>
+                    </tr>
+                    <tr>
+                        <td ng-class="{ success: userForm.$pristine, danger: !userForm.$pristine }">Pristine</td>
+                    </tr>
+                    <tr>
+                        <td ng-class="{ success: userForm.$dirty }">Dirty</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="col-xs-3">
+            <h3>Name</h3>
+            <table class="table table-bordered">
+                <tbody>
+                    <tr>
+                        <td ng-class="{ success: userForm.name.$valid, danger: userForm.name.$invalid }">Valid</td>
+                    </tr>
+                    <tr>
+                        <td ng-class="{ success: userForm.name.$pristine, danger: !userForm.name.$pristine }">Pristine</td>
+                    </tr>
+                    <tr>
+                        <td ng-class="{ success: userForm.name.$dirty }">Dirty</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="col-xs-3">
+            <h3>Username</h3>
+            <table class="table table-bordered">
+                <tbody>
+                    <tr>
+                        <td ng-class="{ success: userForm.username.$valid, danger: userForm.username.$invalid }">Valid</td>
+                    </tr>
+                    <tr>
+                        <td ng-class="{ success: userForm.username.$pristine, danger: !userForm.username.$pristine }">Pristine</td>
+                    </tr>
+                    <tr>
+                        <td ng-class="{ success: userForm.username.$dirty }">Dirty</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="col-xs-3">
+            <h3>Email</h3>
+            <table class="table table-bordered">
+                <tbody>
+                    <tr>
+                        <td ng-class="{ success: userForm.email.$valid, danger: userForm.email.$invalid }">Valid</td>
+                    </tr>
+                    <tr>
+                        <td ng-class="{ success: userForm.email.$pristine, danger: !userForm.email.$pristine }">Pristine</td>
+                    </tr>
+                    <tr>
+                        <td ng-class="{ success: userForm.email.$dirty }">Dirty</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>-->
+<!--    </div>-->
+    
+
+
+
+</div>
+</div>
+</div>
+    <script src="bower_components/angular/angular.js" type="text/javascript"></script>
+    <script src="bower_components/angular/angular-resource.js" type="text/javascript"></script>
+    <script src="bower_components/angular-route/angular-route.js" type="text/javascript"></script>
+    <script src="js1/app.js" type="text/javascript"></script>
+
+  <br />
+

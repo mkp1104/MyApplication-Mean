@@ -1,0 +1,11 @@
+{"v":0,"level":30,"name":"newrelic","hostname":"MANISHP","pid":7140,"time":"2014-11-20T12:54:49.934Z","msg":"Starting New Relic for Node.js connection process."}
+{"v":0,"level":30,"name":"newrelic","hostname":"MANISHP","pid":7140,"time":"2014-11-20T12:54:56.517Z","msg":"Reporting to: https://rpm.newrelic.com/accounts/825137/applications/7040840","component":"new_relic_response"}
+{"v":0,"level":30,"name":"newrelic","hostname":"MANISHP","pid":7140,"time":"2014-11-20T12:54:56.518Z","msg":"Connected to collector-123.newrelic.com:443 with agent run ID 1272606448.","component":"collector_api"}
+{"v":0,"level":30,"name":"newrelic","hostname":"MANISHP","pid":7140,"time":"2014-11-20T12:56:00.509Z","msg":"The New Relic collector requested a connection restart on metric_data:","component":"collector_api","class":"NewRelic::Agent::ForceRestartException","statusCode":200}
+{"v":0,"level":30,"name":"newrelic","hostname":"MANISHP","pid":7140,"time":"2014-11-20T12:56:01.565Z","msg":"Disconnected from New Relic; clearing run ID 1272606448.","component":"collector_api"}
+{"v":0,"level":30,"name":"newrelic","hostname":"MANISHP","pid":7140,"time":"2014-11-20T12:56:04.051Z","msg":"Reporting to: https://rpm.newrelic.com/accounts/825137/applications/7040840","component":"new_relic_response"}
+{"v":0,"level":30,"name":"newrelic","hostname":"MANISHP","pid":7140,"time":"2014-11-20T12:56:04.052Z","msg":"Connected to collector-123.newrelic.com:443 with agent run ID 1272608146.","component":"collector_api"}
+{"v":0,"level":30,"name":"newrelic","hostname":"MANISHP","pid":7184,"time":"2014-11-20T14:09:33.778Z","msg":"Starting New Relic for Node.js connection process."}
+{"v":0,"level":30,"name":"newrelic","hostname":"MANISHP","pid":7180,"time":"2014-11-21T05:30:00.191Z","msg":"Starting New Relic for Node.js connection process."}
+{"v":0,"level":30,"name":"newrelic","hostname":"MANISHP","pid":7180,"time":"2014-11-21T05:30:09.986Z","msg":"Reporting to: https://rpm.newrelic.com/accounts/825137/applications/7040840","component":"new_relic_response"}
+{"v":0,"level":30,"name":"newrelic","hostname":"MANISHP","pid":7180,"time":"2014-11-21T05:30:09.987Z","msg":"Connected to collector-123.newrelic.com:443 with agent run ID 1274034186.","component":"collector_api"}
