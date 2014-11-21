@@ -8,29 +8,39 @@ mongoose.connect('mongodb://localhost:27017/MeanData'); // connect to our databa
 
 
 var Bear = require('./Model/bear');
-var UserFormData = require('./Model/FormData');
-var cors = require('cors');
+var UserFormData = require('./Model/FormData'); 
 // call the packages we need
 var express    = require('express')
   , path = require('path')
   , http = require('http')
-  , reload = require('reload'); 		// call express
+  , reload = require('reload')
+  , cors = require('cors')
+  , jwt = require('express-jwt')
+  , bodyParser = require('body-parser'); 		// call express
 var app = express(); 	
-var jwt = require('express-jwt');
 var jwtCheck = jwt({
     secret: new Buffer('VVJmcbl20Ex8Xif6qkzCBL2idHVU6k4NQOO9PQ6pDSgmE-avuAF_y11RaBCws7d9', 'base64'),
     audience: 'hGjThwxsOXDlvjSVy0sK2BMP18ooD4Yq'
   });
 // var clientDir = path.join(__dirname, 'client')			// define our app using express
-var bodyParser = require('body-parser');
+
 
 // configure app to use bodyParser()
 // this will let us get the data from a POST
 app.use('/api/userForm', jwtCheck);
 app.use('/api/allUserData', jwtCheck);
-app.use(cors());
 app.use(bodyParser());
+app.use(cors());
+// app.use(bodyParser.urlencoded());
+// app.use(bodyParser.json());
 
+// app.use(function(err, req, res, next) {
+  // if (err.name === 'StatusError') {
+    // res.send(err.status, err.message);
+  // } else {
+    // next(err);
+  // }
+// });
 //app.use(app.router); 
   // app.use(express.static(clientDir)); 
 
@@ -100,6 +110,7 @@ router.route('/userForm')
 	    if (err) 
       {
 	     res.send(err);
+		 res.json({message:'Unable to creat Collection in MongoDB!!!(MKP)'});
          console.error('ERROR!:at Port:8085');
          console.log('Error log:at Port:8085');
       }else{
@@ -150,10 +161,13 @@ router.route('/allUserData/:user_id')
 	    // save the userFormData
 	    userFormData.save(function (err) {
 	      if (err)
+		  {
 	        res.send(err);
-
+			console.error("unable to save data at Port:8085");
+		  }else{
 	      res.json({ message: 'userFormData updated!' });
-	    });
+      }	  
+	  });
 
 	  });
 	}).delete(function(req, res) {
@@ -162,7 +176,6 @@ router.route('/allUserData/:user_id')
 		}, function(err, allUsers) {
 			if (err)
 				res.send(err);
-
 			res.json({ message: 'userFormData Successfully deleted' });
 		});
 	});

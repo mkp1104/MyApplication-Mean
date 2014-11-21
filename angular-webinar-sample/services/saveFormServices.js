@@ -3,11 +3,11 @@ angular.module('SaveFormServices', ['ngResource'])
     .factory('FormService', function ($http,$location) {
       return {
 
-        save: function (user) {
+        save: function (userData) {
           return $http({
             method: 'POST',
             url: 'http://localhost:8085/api/userForm',
-            data: user
+            data: JSON.stringify(userData)
           }).success(function (data, status, headers, config) {
             console.log('DATA:'+ data);
             console.log('status:'+status);
