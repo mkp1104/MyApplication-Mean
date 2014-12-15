@@ -9,8 +9,8 @@ var FormDataSchema = new Schema({
   practiceArea: { type: String, required: true },
   projectname: { type: String, required: true },
   requester: { type: String, required: true },
-  skillsReff1: [{interviewrating:{type:String,required:true},jrssrating:{type:String,required:true},name:{type:String,required:true}}],
-  skillsReff2: [{interviewrating:{type:String,required:true},jrssrating:{type:String,required:true},name:{type:String,required:true}}]
+  skillsReff1: [{interviewrating:{type:String,required:true},jrssrating:{type:String,required:true},skillname:{type:String,required:true}}],
+  skillsReff2: [{interviewrating:{type:String,required:true},jrssrating:{type:String,required:true},skillname:{type:String,required:true}}]
 });
 
 module.exports = mongoose.model('MyApplicationData', FormDataSchema);

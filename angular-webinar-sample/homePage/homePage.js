@@ -23,7 +23,7 @@ angular.module('sample.homePage', [
 		  $scope.userForm.$setPristine();
 		  console.log("$pristine = " + $scope.userForm.$pristine);
           FormService.save($scope.user);
-          FormService.get();
+          //FormService.get();
 
           $scope.user.candidatename = null;
           $scope.user.projectname = null;

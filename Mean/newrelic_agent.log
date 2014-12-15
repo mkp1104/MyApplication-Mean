@@ -55,3 +55,9 @@
 {"v":0,"level":30,"name":"newrelic","hostname":"MANISHP","pid":10992,"time":"2014-11-21T13:32:23.073Z","msg":"Connected to collector-123.newrelic.com:443 with agent run ID 1274671653.","component":"collector_api"}
 {"v":0,"level":50,"name":"newrelic","hostname":"MANISHP","pid":10992,"time":"2014-11-21T13:43:37.772Z","msg":"Calling metric_data on New Relic failed unexpectedly. Data will be held until it can be submitted:","component":"collector_api","syscall":"read","errno":"ECONNRESET","code":"ECONNRESET"}
 {"v":0,"level":30,"name":"newrelic","hostname":"MANISHP","pid":10992,"time":"2014-11-21T13:43:37.772Z","msg":"Error on submission to New Relic (data held for redelivery):","syscall":"read","errno":"ECONNRESET","code":"ECONNRESET"}
+{"v":0,"level":30,"name":"newrelic","hostname":"MANISHP","pid":15212,"time":"2014-12-09T10:50:01.034Z","msg":"Starting New Relic for Node.js connection process."}
+{"v":0,"level":30,"name":"newrelic","hostname":"MANISHP","pid":15212,"time":"2014-12-09T10:50:11.887Z","msg":"Reporting to: https://rpm.newrelic.com/accounts/825137/applications/7040840","component":"new_relic_response"}
+{"v":0,"level":30,"name":"newrelic","hostname":"MANISHP","pid":15212,"time":"2014-12-09T10:50:11.889Z","msg":"Connected to collector-123.newrelic.com:443 with agent run ID 1311784191.","component":"collector_api"}
+{"v":0,"level":30,"name":"newrelic","hostname":"MANISHP","pid":340,"time":"2014-12-11T06:13:28.535Z","msg":"Starting New Relic for Node.js connection process."}
+{"v":0,"level":30,"name":"newrelic","hostname":"MANISHP","pid":340,"time":"2014-12-11T06:13:40.269Z","msg":"Reporting to: https://rpm.newrelic.com/accounts/825137/applications/7040840","component":"new_relic_response"}
+{"v":0,"level":30,"name":"newrelic","hostname":"MANISHP","pid":340,"time":"2014-12-11T06:13:40.270Z","msg":"Connected to collector-123.newrelic.com:443 with agent run ID 1315652181.","component":"collector_api"}
