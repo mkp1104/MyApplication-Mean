@@ -7,6 +7,7 @@ var FormDataSchema = new Schema({
   date: { type: Date, required: true },
   interviewername: { type: String, required: true },
   practiceArea: { type: String, required: true },
+  signature: { type: String, required: true },
   projectname: { type: String, required: true },
   requester: { type: String, required: true },
   skillsReff1: [{interviewrating:{type:String,required:true},jrssrating:{type:String,required:true},name:{type:String,required:true}}],

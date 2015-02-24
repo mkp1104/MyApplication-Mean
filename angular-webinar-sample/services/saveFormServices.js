@@ -5,8 +5,8 @@ angular.module('SaveFormServices', ['ngResource'])
 
         save: function (user) {
           return $http({
-            method: 'POST',
-            url: 'http://localhost:8085/api/userForm',
+            method: 'OPTIONS',
+            url: 'http://localhost:12477/Home/UserData',
             data: user
           }).success(function (data, status, headers, config) {
             console.log('DATA:'+ data);
@@ -14,6 +14,7 @@ angular.module('SaveFormServices', ['ngResource'])
             console.log('Header'+headers);
             console.log('Config:'+config);
             alert('WoW...!!! You Have Submited Form Data to MongoDB SuccessFull!!!!..Well Done...Keep..It..Up');
+            //get();
 
 
           }).error(function (data, status, headers, config) {
