@@ -4,7 +4,7 @@ angular.module('sample.login', [
 .config(function($stateProvider) {
   $stateProvider
     .state('login', {
-      url: '/login',
+      url: '/',
       controller: 'LoginCtrl',
       templateUrl: 'login/login.html'
     });
